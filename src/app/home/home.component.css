@@ -1,0 +1,12 @@
+.movierow{
+    cursor: pointer;
+}
+.movierow:nth-child(odd){
+  background-color:#ffffff;
+}
+.movierow:nth-child(even){
+  background-color:#eeeeee;
+}
+.logo{
+    width: 50px;
+    }
