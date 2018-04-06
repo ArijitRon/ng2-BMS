@@ -1,0 +1,47 @@
+[
+    {
+        "theaterName": "PVR",
+        "seats":{
+                "executive": "70",
+                "club": "80"
+            },
+        "cost":{
+                "executive": "150",
+                "club": "100"
+            }
+    },
+    {
+        "theaterName": "INOX",
+        "seats":{
+                "executive": "50",
+                "club": "90"
+            },
+        "cost":{
+                "executive": "130",
+                "club": "80"
+            }
+    },
+    {
+        "theaterName": "CINEMAX",
+        "seats": {
+                "executive": "70",
+                "club": "80"
+            },
+        "cost":
+            {
+                "executive": "150",
+                "club": "100"
+            }
+    },
+     {
+        "theaterName": "ARTI",
+        "seats": {
+                "executive": "70",
+                "club": "80"
+            },
+        "cost":
+            {
+                "executive": "150",
+                "club": "100"}
+    }
+]
