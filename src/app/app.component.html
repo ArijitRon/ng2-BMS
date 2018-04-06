@@ -6,8 +6,9 @@
       <a  routerLink="/home" class="navbar-brand">BookMyTicket</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="/signup" routerLinkActive="Active"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
-      <li><a routerLink="/login" routerLinkActive="Active"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li *ngIf="!loginStatus"><a routerLink="/signup" routerLinkActive="Active"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
+      <li *ngIf="!loginStatus"><a routerLink="/login" routerLinkActive="Active"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li *ngIf="loginStatus"><a routerLink="/login" routerLinkActive="Active"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
     </ul>
   </div>
 </nav>

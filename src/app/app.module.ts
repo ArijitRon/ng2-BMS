@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import{ LoginService} from './login/login.service'
 
 
 
@@ -35,7 +36,7 @@ import { SignupComponent } from './signup/signup.component';
         path: 'home', component: HomeComponent
       }])
   ],
-  providers: [MovieListService],
+  providers: [MovieListService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

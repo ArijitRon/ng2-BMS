@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from "./login.service";
 
 @Component({
   selector: 'app-login',
@@ -10,13 +11,14 @@ export class LoginComponent implements OnInit {
   email: string;
   pwd: string;
   user: Object;
+  loginStatus: boolean;
   userDetails: {}[];
-  constructor( private router:Router,) {
-   
-   }
+  constructor(private router: Router, private loginStatusService: LoginService) {
 
+  }
   ngOnInit() {
     this.userDetails = JSON.parse(localStorage.getItem('user'));
+    this.loginStatus = false;
   }
 
   onLogIn() {
@@ -26,12 +28,17 @@ export class LoginComponent implements OnInit {
     }
     this.userDetails = JSON.parse(localStorage.getItem('users'));
     for (let i = 0; i < this.userDetails.length; i++) {
-     if( JSON.stringify(this.userDetails[i]) == JSON.stringify(this.user)){
-       window.alert(this.email+' you are logged in');
-       this.router.navigateByUrl('/home');
-       return;
-     }
+      if (JSON.stringify(this.userDetails[i]) == JSON.stringify(this.user)) {
+        window.alert(this.email + ' you are logged in');
+        this.loginStatusService.changeStatus(true);
+        this.router.navigateByUrl('/home');
+        return;
+      }
     }
-     window.alert('Need to Sign Up');
+    if (window.confirm('Need to Sign Up')) {
+      this.router.navigateByUrl('/signup');
+    }
   }
+
+
 }

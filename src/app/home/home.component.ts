@@ -14,8 +14,6 @@ movielist=[];
   ngOnInit() {
     this._movielist.getMovieList().subscribe((data) => {
       this.movielist = data;
-      console.log(this.movielist);
-      
     });
   }
 
