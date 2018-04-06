@@ -8,7 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import{ LoginService} from './login/login.service'
+import{ LoginService} from './login/login.service';
+import { HalldescriptionComponent } from './halldescription/halldescription.component';
 
 
 
@@ -19,7 +20,8 @@ import{ LoginService} from './login/login.service'
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    HalldescriptionComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,8 @@ import{ LoginService} from './login/login.service'
         path: 'signup', component: SignupComponent
       }, {
         path: 'home', component: HomeComponent
+      },{
+         path: 'description', component: HalldescriptionComponent
       }])
   ],
   providers: [MovieListService,LoginService],
